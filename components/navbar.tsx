@@ -775,7 +775,7 @@ export default function Navbar() {
       children: [
         { title: "Annexures Overview", href: "/muhs-mandate/annexures" },
         {
-          title: "Annexure I",
+          title: "Annexure I-Seat Matrix",
           href: `${process.env.NEXT_PUBLIC_STATIC_ASSETS}/PDF/muh/ANNEXURI.pdf`,
           target: "_blank",
         },
@@ -856,7 +856,7 @@ export default function Navbar() {
           target: "_blank",
         },
         {
-          title: "Annexure XIV",
+          title: "Annexure XIV-Result",
           href: `${process.env.NEXT_PUBLIC_STATIC_ASSETS}/PDF/muh/Annexure-XIV.pdf`,
           target: "_blank",
         },
@@ -866,7 +866,7 @@ export default function Navbar() {
           target: "_blank",
         },
         {
-          title: "Annexure XVI",
+          title: "Annexure XVI-Declaration",
           href: `${process.env.NEXT_PUBLIC_STATIC_ASSETS}/PDF/muh/Annexure-XVI.pdf`,
           target: "_blank",
         },
