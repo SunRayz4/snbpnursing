@@ -1,154 +1,3 @@
-// import React from 'react'
-// import Image from 'next/image'
-
-// function LibraryPage() {
-//   return (
-//     <div className="max-w-6xl mx-auto px-4 py-16 relative overflow-hidden">
-//       {/* Decorative Background Gradient Circles */}
-//       <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-pink-200/30 rounded-full blur-3xl z-0"></div>
-//       <div className="absolute bottom-[-100px] right-[-100px] w-[300px] h-[300px] bg-pink-200/30 rounded-full blur-3xl z-0"></div>
-
-//       {/* Header */}
-//       <div className="text-center mb-16 relative z-10">
-//         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-//           Our <span className="text-pink-600">College Library</span>
-//         </h1>
-//         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-//           Our well-stocked library serves as a knowledge hub for students and faculty, providing extensive resources for academic excellence.
-//         </p>
-//       </div>
-
-//       {/* About Section */}
-//       <div className="grid md:grid-cols-2 gap-10 mb-20 relative z-10">
-//         <div className="rounded-xl overflow-hidden shadow-md">
-//           <Image
-//             src="/images/library-1.jpg"
-//             alt="College Library"
-//             width={800}
-//             height={500}
-//             className="rounded-xl object-cover"
-//           />
-//         </div>
-//         <div>
-//           <h2 className="text-2xl font-bold text-pink-600 mb-4">About Our Library</h2>
-//           <p className="text-gray-700 mb-4">
-//             The college has a well-organized and spacious library for the use of students and teachers. It is managed by a qualified librarian and provides a conducive environment for learning and research.
-//           </p>
-//           <p className="text-gray-700 mb-4">
-//             The library houses a large collection of books in Nursing and Allied subjects, including the latest editions of textbooks and reference materials.
-//           </p>
-//           <p className="text-gray-700">
-//             We maintain subscriptions to both Indian and foreign journals pertaining to Nursing and allied health sciences, keeping our faculty and students updated with current research and developments in the field.
-//           </p>
-//         </div>
-//       </div>
-
-//       {/* Feature Cards */}
-//       <div className="grid md:grid-cols-3 gap-6 mb-16 relative z-10">
-//         {[
-//           {
-//             title: 'Book Collection',
-//             items: [
-//               '10,000+ books in nursing',
-//               '5,000+ reference books',
-//               'Latest editions of all textbooks',
-//               'Rare medical collections',
-//             ],
-//           },
-//           {
-//             title: 'Journal Collection',
-//             items: [
-//               '50+ Indian journals',
-//               '30+ International journals',
-//               'E-journal subscriptions',
-//               'Back volumes available',
-//             ],
-//           },
-//           {
-//             title: 'Facilities',
-//             items: [
-//               'Computerized catalog system',
-//               'High-speed internet access',
-//               'Reading room capacity: 100 students',
-//               'Photocopying facility',
-//             ],
-//           },
-//         ].map((section, i) => (
-//           <div key={i} className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-//             <h3 className="text-xl font-semibold text-pink-600 mb-4">{section.title}</h3>
-//             <ul className="space-y-2 text-gray-700 text-sm">
-//               {section.items.map((item, idx) => (
-//                 <li key={idx}>• {item}</li>
-//               ))}
-//             </ul>
-//           </div>
-//         ))}
-//       </div>
-
-//       {/* Reading Room */}
-//       <div className="bg-pink-50 p-10 rounded-2xl shadow-md mb-16 relative z-10">
-//         <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Reading Room Facilities</h2>
-//         <div className="grid md:grid-cols-2 gap-8 items-center">
-//           <div>
-//             <Image
-//               src="/images/reading-room.jpg"
-//               alt="Reading Room"
-//               width={600}
-//               height={400}
-//               className="rounded-xl shadow-lg object-cover"
-//             />
-//           </div>
-//           <div>
-//             <p className="text-gray-700 mb-4">
-//               Our spacious reading room provides a quiet and comfortable environment for students to study and conduct research. The area is well-lit and air-conditioned, with ample seating capacity.
-//             </p>
-//             <p className="text-gray-700 mb-4">
-//               The reading room includes individual study carrels as well as group study tables to accommodate different learning preferences. Students can access reference materials directly from the reading room.
-//             </p>
-//             <p className="text-gray-700">
-//               The reading room remains open beyond regular library hours during examination periods to support students in their preparations.
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Library Hours */}
-//       <div className="bg-white p-10 rounded-2xl shadow-md border border-gray-200 relative z-10">
-//         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Library Hours</h2>
-//         <div className="max-w-md mx-auto">
-//           <table className="w-full text-gray-700 text-sm">
-//             <tbody className="divide-y divide-gray-200">
-//               <tr>
-//                 <td className="py-3 font-medium">Monday - Friday</td>
-//                 <td className="py-3 text-right">8:00 AM - 8:00 PM</td>
-//               </tr>
-//               <tr>
-//                 <td className="py-3 font-medium">Saturday</td>
-//                 <td className="py-3 text-right">9:00 AM - 5:00 PM</td>
-//               </tr>
-//               <tr>
-//                 <td className="py-3 font-medium">Sunday</td>
-//                 <td className="py-3 text-right">10:00 AM - 4:00 PM</td>
-//               </tr>
-//               <tr>
-//                 <td className="py-3 font-medium">Holidays</td>
-//                 <td className="py-3 text-right">Closed</td>
-//               </tr>
-//             </tbody>
-//           </table>
-//           <p className="text-sm text-gray-500 mt-4 text-center">
-//             * Extended hours during examination periods
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default LibraryPage
-
-
-
 'use client'
 
 import React from 'react'
@@ -158,24 +7,24 @@ const ASSET_BASE = process.env.NEXT_PUBLIC_STATIC_ASSETS
 
 const points = [
   {
-    icon: 'bi-book-fill',
-    text: 'The library is well-stocked with a wide collection of textbooks, reference books, national and international journals, magazines, and digital resources related to nursing and healthcare.',
+    icon: 'bi-hospital-fill',
+    text: 'The Nursing Foundation Lab is a fundamental training facility where students develop basic nursing skills and clinical competencies. It provides a simulated clinical environment that prepares students for real-life patient care in hospitals and healthcare settings.',
   },
   {
-    icon: 'bi-laptop-fill',
-    text: 'It also offers access to e-books, online databases, and internet facilities for advanced learning and research.',
+    icon: 'bi-capsule-pill',
+    text: 'The lab is well-equipped with hospital beds, mannequins, nursing models, instruments, and essential equipment, allowing students to practice procedures such as bed making, vital signs monitoring, patient hygiene, first aid, and basic nursing care.',
   },
   {
-    icon: 'bi-lamp-fill',
-    text: 'A spacious reading area with proper seating and lighting is available to ensure a peaceful study atmosphere.',
+    icon: 'bi-person-check-fill',
+    text: 'Students are trained under the guidance of experienced faculty in a safe, controlled, and supervised environment, helping them build confidence, accuracy, and professionalism in their practice.',
   },
   {
-    icon: 'bi-journals',
-    text: 'The library follows a systematic arrangement and cataloging system for easy access to books and materials.',
+    icon: 'bi-display-fill',
+    text: 'Modern teaching aids and audio-visual tools are used to enhance learning and understanding.',
   },
   {
     icon: 'bi-mortarboard-fill',
-    text: 'The library plays a key role in promoting knowledge enhancement, research activities, and lifelong learning, making it an essential part of the academic infrastructure.',
+    text: 'The Nursing Foundation Lab plays a vital role in developing clinical skills, communication, and patient care techniques, forming a strong base for advanced nursing education.',
   },
 ]
 
@@ -298,13 +147,13 @@ export default function Page() {
           {/* ── Eyebrow ── */}
           <div className="d-flex align-items-center gap-3 mb-2 anim-1">
             <div className="eyebrow-line" />
-            <span className="eyebrow-text">Campus Facilities</span>
+            <span className="eyebrow-text">Nursing Simulation Labs</span>
             <div className="eyebrow-line" />
           </div>
 
           {/* ── Section Title ── */}
           <h2 className="section-title text-center mb-5 anim-1">
-            Explore Our <em>Library</em> Facility
+            Explore Our <em>Nursing Foundation</em> Lab
           </h2>
 
           {/* ── Main Info Card ── */}
@@ -313,17 +162,17 @@ export default function Page() {
             {/* LEFT — Illustration Panel */}
             <div className="col-lg-4 illus-panel anim-2">
               <div className="illus-icon-wrap">
-                <i className="bi bi-book-half" />
+                <i className="bi bi-clipboard2-heart-fill" />
               </div>
-              <div className="illus-title">Library &amp;<br />Knowledge Centre</div>
+              <div className="illus-title">Nursing<br />Foundation Lab</div>
               <div className="illus-sub">
-                A rich collection of resources to support learning, research, and academic excellence.
+                Building core clinical skills and competencies for real-life patient care.
               </div>
               <div className="d-flex flex-wrap justify-content-center gap-2 mt-1">
-                <span className="illus-badge"><i className="bi bi-journals me-1" />Textbooks</span>
-                <span className="illus-badge"><i className="bi bi-globe me-1" />E-Resources</span>
-                <span className="illus-badge"><i className="bi bi-search me-1" />Research</span>
-                <span className="illus-badge"><i className="bi bi-lamp me-1" />Reading Area</span>
+                <span className="illus-badge"><i className="bi bi-heart-pulse-fill me-1" />Vital Signs</span>
+                <span className="illus-badge"><i className="bi bi-bandaid-fill me-1" />First Aid</span>
+                <span className="illus-badge"><i className="bi bi-person-fill me-1" />Patient Care</span>
+                <span className="illus-badge"><i className="bi bi-activity me-1" />Clinical Skills</span>
               </div>
             </div>
 
@@ -331,10 +180,10 @@ export default function Page() {
             <div className="col-lg-8 bg-white p-4 p-lg-5 d-flex flex-column justify-content-center position-relative">
               <div className="corner-decor" />
 
-              <div className="content-tag mb-3 anim-3">Academic Infrastructure</div>
+              <div className="content-tag mb-3 anim-3">Foundational Nursing Training</div>
 
               <h3 className="content-title mb-3 anim-3">
-                Library &amp; <span>Knowledge Centre</span>
+                Nursing <span>Foundation Lab</span>
               </h3>
 
               <div className="divider mb-3 anim-3" />
@@ -350,7 +199,7 @@ export default function Page() {
 
               <div className="anim-5">
                 <Link href="#video" className="btn lab-cta d-inline-flex align-items-center gap-2">
-                  Watch Library Tour
+                  Watch Lab Tour
                   <i className="bi bi-play-circle-fill arrow" />
                 </Link>
               </div>
@@ -376,18 +225,18 @@ export default function Page() {
                     controls
                     playsInline
                     preload="metadata"
-                    aria-label="Library facility tour video"
+                    aria-label="Nursing Foundation Lab video tour"
                     style={{ width: '100%' }}
                   >
                     <source
-                      src={`${ASSET_BASE}/videos/facility/Library.mp4`}
+                      src={`${ASSET_BASE}/videos/facility/NursingFoundationLab.mp4`}
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
                   </video>
                   <div className="video-label">
                     <i className="bi bi-camera-video-fill" />
-                    <span>Library — Facility Tour</span>
+                    <span>Nursing Foundation Lab — Facility Tour</span>
                   </div>
                 </div>
               </div>

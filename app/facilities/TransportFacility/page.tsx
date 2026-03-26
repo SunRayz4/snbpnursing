@@ -4,31 +4,24 @@ import React from 'react'
 import Link from 'next/link'
 
 const ASSET_BASE = process.env.NEXT_PUBLIC_STATIC_ASSETS
+const MEDIA_BASE = `${ASSET_BASE}/videos/facility/`
 
 const points = [
   {
-    icon: 'bi-journal-medical',
-    text: 'This laboratory is designed to provide students with a strong foundation in basic medical and nursing sciences.',
+    icon: 'bi-bus-front-fill',
+    text: 'The institution provides a well-organized and reliable transport facility to ensure safe and convenient travel for students and staff. The service covers various routes across the city, including transportation for clinical postings to hospitals, community postings, and mental health postings, as well as nearby areas, making daily commuting easy and comfortable.',
   },
   {
-    icon: 'bi-diagram-2-fill',
-    text: 'It supports practical learning in subjects such as anatomy, physiology, and microbiology through demonstrations and hands-on experience.',
-  },
-  {
-    icon: 'bi-heart-pulse-fill',
-    text: 'The room is equipped with anatomical models, charts, mannequins, microscopes, and specimens to help students understand the structure and functions of the human body.',
-  },
-  {
-    icon: 'bi-display-fill',
-    text: 'Modern teaching aids and audio-visual tools are used to make learning more effective and interesting.',
+    icon: 'bi-person-badge-fill',
+    text: 'The transport system includes well-maintained buses with comfortable seating, operated by experienced drivers and supported by trained staff to ensure safety at all times.',
   },
   {
     icon: 'bi-shield-check',
-    text: 'The lab maintains a clean, safe, and disciplined environment for skill development under proper guidance.',
+    text: 'The facility follows strict safety measures, punctual schedules, and regular maintenance, ensuring smooth and hassle-free transportation.',
   },
   {
-    icon: 'bi-person-check-fill',
-    text: 'This facility helps students build confidence, clinical skills, and scientific knowledge before entering real healthcare settings.',
+    icon: 'bi-clock-history',
+    text: 'This service helps students save time, reduces travel-related stress, and ensures they reach their destinations safely and on time. The transport facility plays an important role in supporting regular attendance and overall convenience for students.',
   },
 ]
 
@@ -39,7 +32,6 @@ export default function Page() {
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 
-      {/* SAME FULL STYLE (UNCHANGED) */}
       <style>{`
         :root {
           --rose:#b5475a; --rose-pale:#fdf0f2; --rose-light:#e8a0ad;
@@ -65,8 +57,25 @@ export default function Page() {
 
         .lab-cta{background:var(--rose);color:#fff;border-radius:50px;padding:.6rem 1.5rem;}
 
-        .video-card{border-radius:16px;overflow:hidden;background:#1a1a2e;margin-bottom:20px;}
-        .video-label{background:var(--rose);color:#fff;padding:.8rem;}
+        .media-card{border-radius:16px;overflow:hidden;background:#1a1a2e;margin-bottom:20px;}
+        .media-label{background:var(--rose);color:#fff;padding:.8rem;}
+
+        /* 🔥 FIXED MEDIA SIZE */
+        .media-card video,
+        .media-card img {
+          width: 100%;
+          height: 380px;
+          object-fit: cover;
+          display: block;
+        }
+
+        /* 📱 Responsive */
+        @media (max-width: 768px) {
+          .media-card video,
+          .media-card img {
+            height: 220px;
+          }
+        }
       `}</style>
 
       <main className="min-vh-100 py-5">
@@ -75,12 +84,12 @@ export default function Page() {
           {/* TITLE */}
           <div className="d-flex align-items-center gap-3 mb-2">
             <div className="eyebrow-line" />
-            <span className="eyebrow-text">Preclinical Training</span>
+            <span className="eyebrow-text">Student Transport Service</span>
             <div className="eyebrow-line" />
           </div>
 
           <h2 className="section-title text-center mb-5">
-            Explore Our <em>Preclinical Science Room</em>
+            Explore Our <em>Transport Facility</em>
           </h2>
 
           {/* MAIN CARD */}
@@ -89,18 +98,18 @@ export default function Page() {
             {/* LEFT */}
             <div className="col-lg-4 illus-panel">
               <div className="illus-icon-wrap">
-                <i className="bi bi-capsule-pill" />
+                <i className="bi bi-bus-front-fill" />
               </div>
-              <div className="illus-title">Preclinical Science Room</div>
+              <div className="illus-title">Transport Facility</div>
               <div className="illus-sub">
-                Building strong scientific and clinical foundations for future healthcare professionals.
+                Safe, reliable, and comfortable travel for students and staff.
               </div>
             </div>
 
             {/* RIGHT */}
             <div className="col-lg-8 p-4">
               <h3 className="content-title mb-3">
-                Preclinical <span>Science Room</span>
+                Transport <span>Facility</span>
               </h3>
 
               <ul className="list-unstyled d-flex flex-column gap-2 mb-4">
@@ -112,46 +121,47 @@ export default function Page() {
                 ))}
               </ul>
 
-              <Link href="#video" className="btn lab-cta">
-                Watch Lab Tour <i className="bi bi-play-circle-fill ms-1" />
+              <Link href="#media" className="btn lab-cta">
+                View Facility <i className="bi bi-play-circle-fill ms-1" />
               </Link>
             </div>
           </div>
 
-          {/* VIDEO SECTION */}
-          <div id="video">
+          {/* MEDIA SECTION */}
+          <div id="media">
             <h3 className="text-center mb-4">
-              Take a <em>Virtual Tour</em>
+              Transport <em>Facility Tour</em>
             </h3>
 
             <div className="row justify-content-center">
               <div className="col-lg-9">
 
-                {/* VIDEO 1 */}
-                <div className="video-card">
-                  <video controls style={{ width: '100%' }}>
-                    <source
-                      src={`${ASSET_BASE}/videos/facility/preclinicalsci1.mp4`}
-                      type="video/mp4"
-                    />
+                {/* VIDEO */}
+                <div className="media-card">
+                  <video controls>
+                    <source src={`${MEDIA_BASE}transport.mp4`} type="video/mp4" />
                   </video>
-                  <div className="video-label">
+                  <div className="media-label">
                     <i className="bi bi-camera-video-fill me-2" />
-                    Preclinical Science Room — Tour 1
+                    Transport Facility — Video Tour
                   </div>
                 </div>
 
-                {/* VIDEO 2 */}
-                <div className="video-card">
-                  <video controls style={{ width: '100%' }}>
-                    <source
-                      src={`${ASSET_BASE}/videos/facility/preclinicalsci2.mp4`}
-                      type="video/mp4"
-                    />
-                  </video>
-                  <div className="video-label">
-                    <i className="bi bi-camera-video-fill me-2" />
-                    Preclinical Science Room — Tour 2
+                {/* IMAGE 1 */}
+                <div className="media-card">
+                  <img src={`${MEDIA_BASE}transportfacility1.jpeg`} alt="Transport Facility 1" />
+                  <div className="media-label">
+                    <i className="bi bi-image-fill me-2" />
+                    Transport Facility View 1
+                  </div>
+                </div>
+
+                {/* IMAGE 2 */}
+                <div className="media-card">
+                  <img src={`${MEDIA_BASE}transportfacility2.jpeg`} alt="Transport Facility 2" />
+                  <div className="media-label">
+                    <i className="bi bi-image-fill me-2" />
+                    Transport Facility View 2
                   </div>
                 </div>
 

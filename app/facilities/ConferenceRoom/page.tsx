@@ -7,28 +7,20 @@ const ASSET_BASE = process.env.NEXT_PUBLIC_STATIC_ASSETS
 
 const points = [
   {
-    icon: 'bi-journal-medical',
-    text: 'This laboratory is designed to provide students with a strong foundation in basic medical and nursing sciences.',
+    icon: 'bi-people-fill',
+    text: 'The Conference Room is a well-equipped and professional space designed for conducting meetings, discussions, presentations, and academic activities. It provides a formal and comfortable environment that supports effective communication and decision-making.',
   },
   {
-    icon: 'bi-diagram-2-fill',
-    text: 'It supports practical learning in subjects such as anatomy, physiology, and microbiology through demonstrations and hands-on experience.',
+    icon: 'bi-easel-fill',
+    text: 'The room is furnished with conference tables, comfortable seating, audio-visual equipment, projectors, and presentation tools, ensuring smooth and efficient conduct of meetings and seminars.',
   },
   {
-    icon: 'bi-heart-pulse-fill',
-    text: 'The room is equipped with anatomical models, charts, mannequins, microscopes, and specimens to help students understand the structure and functions of the human body.',
+    icon: 'bi-diagram-3-fill',
+    text: 'It is used for faculty meetings, administrative discussions, workshops, seminars, guest lectures, and student presentations, making it an important part of the institution’s academic and administrative infrastructure.',
   },
   {
-    icon: 'bi-display-fill',
-    text: 'Modern teaching aids and audio-visual tools are used to make learning more effective and interesting.',
-  },
-  {
-    icon: 'bi-shield-check',
-    text: 'The lab maintains a clean, safe, and disciplined environment for skill development under proper guidance.',
-  },
-  {
-    icon: 'bi-person-check-fill',
-    text: 'This facility helps students build confidence, clinical skills, and scientific knowledge before entering real healthcare settings.',
+    icon: 'bi-volume-mute-fill',
+    text: 'A quiet, organized, and well-maintained atmosphere is ensured at all times, creating an ideal setting for productive interactions and collaborative work.',
   },
 ]
 
@@ -39,7 +31,7 @@ export default function Page() {
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 
-      {/* SAME FULL STYLE (UNCHANGED) */}
+      {/* SAME STYLES — NO CHANGE */}
       <style>{`
         :root {
           --rose:#b5475a; --rose-pale:#fdf0f2; --rose-light:#e8a0ad;
@@ -47,25 +39,20 @@ export default function Page() {
           --text-dark:#2a1a1f; --text-mid:#5c3d46;
         }
         body { font-family:'DM Sans',sans-serif; background:var(--cream); }
-
         .eyebrow-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--rose-light),transparent);}
         .eyebrow-text{font-size:.7rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);}
         .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--text-dark);}
         .section-title em{color:var(--rose);}
         .main-card{border-radius:20px;overflow:hidden;box-shadow:0 24px 72px rgba(90,20,35,.13);background:#fff;}
-
         .illus-panel{background:linear-gradient(160deg,var(--rose-pale),#fff5f7);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2.8rem;}
         .illus-icon-wrap{width:100px;height:100px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;}
         .illus-icon-wrap i{font-size:2.5rem;color:var(--rose);}
         .illus-title{font-family:'Playfair Display';font-size:1.3rem;text-align:center;}
         .illus-sub{font-size:.85rem;color:var(--text-mid);text-align:center;}
-
         .content-title span{color:var(--rose);}
         .point-text{font-size:.87rem;color:var(--text-mid);}
-
         .lab-cta{background:var(--rose);color:#fff;border-radius:50px;padding:.6rem 1.5rem;}
-
-        .video-card{border-radius:16px;overflow:hidden;background:#1a1a2e;margin-bottom:20px;}
+        .video-card{border-radius:16px;overflow:hidden;background:#1a1a2e;}
         .video-label{background:var(--rose);color:#fff;padding:.8rem;}
       `}</style>
 
@@ -75,12 +62,12 @@ export default function Page() {
           {/* TITLE */}
           <div className="d-flex align-items-center gap-3 mb-2">
             <div className="eyebrow-line" />
-            <span className="eyebrow-text">Preclinical Training</span>
+            <span className="eyebrow-text">Meeting & Presentation Space</span>
             <div className="eyebrow-line" />
           </div>
 
           <h2 className="section-title text-center mb-5">
-            Explore Our <em>Preclinical Science Room</em>
+            Explore Our <em>Conference Room</em>
           </h2>
 
           {/* MAIN CARD */}
@@ -89,18 +76,18 @@ export default function Page() {
             {/* LEFT */}
             <div className="col-lg-4 illus-panel">
               <div className="illus-icon-wrap">
-                <i className="bi bi-capsule-pill" />
+                <i className="bi bi-building-fill-gear" />
               </div>
-              <div className="illus-title">Preclinical Science Room</div>
+              <div className="illus-title">Conference Room</div>
               <div className="illus-sub">
-                Building strong scientific and clinical foundations for future healthcare professionals.
+                A professional space for meetings, discussions, and presentations.
               </div>
             </div>
 
             {/* RIGHT */}
             <div className="col-lg-8 p-4">
               <h3 className="content-title mb-3">
-                Preclinical <span>Science Room</span>
+                Conference <span>Room</span>
               </h3>
 
               <ul className="list-unstyled d-flex flex-column gap-2 mb-4">
@@ -113,12 +100,12 @@ export default function Page() {
               </ul>
 
               <Link href="#video" className="btn lab-cta">
-                Watch Lab Tour <i className="bi bi-play-circle-fill ms-1" />
+                Watch Room Tour <i className="bi bi-play-circle-fill ms-1" />
               </Link>
             </div>
           </div>
 
-          {/* VIDEO SECTION */}
+          {/* VIDEO */}
           <div id="video">
             <h3 className="text-center mb-4">
               Take a <em>Virtual Tour</em>
@@ -126,35 +113,18 @@ export default function Page() {
 
             <div className="row justify-content-center">
               <div className="col-lg-9">
-
-                {/* VIDEO 1 */}
                 <div className="video-card">
                   <video controls style={{ width: '100%' }}>
                     <source
-                      src={`${ASSET_BASE}/videos/facility/preclinicalsci1.mp4`}
+                      src={`${ASSET_BASE}/videos/facility/conference.mp4`}
                       type="video/mp4"
                     />
                   </video>
                   <div className="video-label">
                     <i className="bi bi-camera-video-fill me-2" />
-                    Preclinical Science Room — Tour 1
+                    Conference Room — Facility Tour
                   </div>
                 </div>
-
-                {/* VIDEO 2 */}
-                <div className="video-card">
-                  <video controls style={{ width: '100%' }}>
-                    <source
-                      src={`${ASSET_BASE}/videos/facility/preclinicalsci2.mp4`}
-                      type="video/mp4"
-                    />
-                  </video>
-                  <div className="video-label">
-                    <i className="bi bi-camera-video-fill me-2" />
-                    Preclinical Science Room — Tour 2
-                  </div>
-                </div>
-
               </div>
             </div>
           </div>
