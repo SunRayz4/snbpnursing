@@ -39,44 +39,33 @@ export default function DirectorMessagePage() {
                 A Message from Our <span className="text-accent-pink">Director</span>
               </h1>
               <div className="mt-6 text-gray-600 space-y-4">
-                <p>
-                  Welcome to SNBP's Nursing Program — where technical excellence meets compassionate care.
-                </p>
-                <div className="flex items-start gap-3 bg-pink-50/50 p-4 rounded-lg border border-pink-100">
-                  <Quote className="h-5 w-5 text-accent-pink mt-1 flex-shrink-0" />
-                  <p className="italic text-gray-700">
-                    "Our mission is to develop nurses who see patients as individuals deserving of dignity, not just medical cases."
-                  </p>
-                </div>
-                    <div className="space-y-6">
-          <p>
-            It is with great pride that we launch our Nursing Program at SNBP Institutions. Since our founding in 1997, we have been committed to educational excellence that combines rigorous academics with strong ethical foundations.
-          </p>
+  <p>
+    It gives me immense pleasure to welcome you to our esteemed institution. Nursing is not just a profession, but a noble service dedicated to the care, compassion, and well-being of humanity. At our institute, we are committed to nurturing competent, compassionate, and skilled nursing professionals who can meet the ever-growing demands of the healthcare sector.
+  </p>
 
-          <p>
-            The addition of nursing to our institution addresses a critical need for healthcare professionals who can combine technical skill with human understanding. We aim to graduate nurses who will be leaders in both clinical competence and patient advocacy.
-          </p>
+  <p>
+    Our curriculum is designed to provide a perfect balance of theoretical knowledge and practical exposure. We focus on holistic development by promoting clinical excellence, ethical values, discipline, and a spirit of lifelong learning among our students.
+  </p>
 
-          <div className="bg-pink-50 rounded-lg p-6 border-l-4 border-accent-pink font-medium text-gray-900">
-            Nursing is more than a career — it's a vocation that demands intelligence, compassion, and moral courage in equal measure.
-          </div>
+  <p>
+    With well-equipped laboratories, experienced faculty, and modern teaching methodologies, we ensure that our students receive quality education and hands-on training. We aim to empower our students to face global healthcare challenges with confidence and dedication.
+  </p>
 
-          <p>
-            Our curriculum is designed to develop professionals who see each patient holistically. Beyond medical knowledge, we emphasize communication skills, ethical decision-making, and cultural sensitivity.
-          </p>
+  <p>
+    I am confident that our students will emerge as responsible healthcare professionals and contribute meaningfully to society.
+  </p>
 
-          <p>
-            We envision SNBP's Nursing Program becoming a benchmark for healthcare education — where students gain not just knowledge, but the wisdom to apply it compassionately in service to others.
-          </p>
+  <p>
+    I extend my best wishes to all aspiring nurses for a bright and successful future.
+  </p>
 
-          <div className="pt-8 text-right font-medium text-dark-navy">
-            Warm regards,<br />
-            <span className="font-semibold">Dr. Rutuja Bhosale</span><br />
-            Trustee & Director,<br />
-            SNBP Group of Institutions
-          </div>
-        </div>
-              </div>
+  <div className="pt-8 text-right font-medium text-dark-navy">
+    Warm regards,<br />
+    <span className="font-semibold">Ms. Devayani Bhosale</span><br />
+    Trustee & Director,<br />
+    SNBP Group of Institutions
+  </div>
+</div>
             </div>
           </div>
         </div>
